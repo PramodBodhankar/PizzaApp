@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+##Implementation Details
+For now i have created mockapiio link which return mw list of pizzas in json structure. All user interaction with filters i handled at front end side only as i was not able to that logic at mockapi side but we can mmove the filters logic at backend side where in get call of list i will pass that lstFilters array from pizzaservice to api body and according to that api will return me the list.
+If somehow you are unable to acces mocapi link you can use pizzalist.json present inside pizzamenu component folder for inpur.
