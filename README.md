@@ -29,5 +29,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Implementation Details
-For now i have created mockapiio link which return mw list of pizzas in json structure. All user interaction with filters i handled at front end side only as i was not able to that logic at mockapi side but we can mmove the filters logic at backend side where in get call of list i will pass that lstFilters array from pizzaservice to api body and according to that api will return me the list.
-If somehow you are unable to acces mocapi link you can use pizzalist.json present inside pizzamenu component folder for inpur.
+For now i have created mockapiio link which return me list of pizzas in json structure. All user interaction with filters is handled at front end side only as i was not able to that logic at mockapi side but we can move the filters logic at backend side where in get call of list i will pass that lstFilters array from pizzaservice to api body and according to that api will return me the list.
+If somehow you are unable to acces mocapi link you can use pizzalist.json present inside pizzamenu component folder for input.
