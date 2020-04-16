@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita",
+    "price": 100,
+    "Category": "Veg",
+    "base": "Thin Crust",
+    "type": "No Cheese"
+  },
+  {
+    "id": 2,
+    "name": "Margherita",
+    "price": 200,
+    "Category": "Veg",
+    "base": "Regular Base",
+    "type": "No Cheese"
+  },
+  {
+    "id": 3,
+    "name": "Margherita",
+    "price": 300,
+    "Category": "Veg",
+    "base": "Flat Bread",
+    "type": "Cheese topping"
+  },
+  {
+    "id": 4,
+    "name": "Margherita",
+    "price": 500,
+    "Category": "Veg",
+    "base": "Multigrain",
+    "type": "Cheese burst"
+  },
+  {
+    "id": 5,
+    "name": "BARBECUE CHICKEN",
+    "price": 100,
+    "Category": "Non-Veg",
+    "base": "Thin Crust",
+    "type": "No Cheese"
+  },
+  {
+    "id": 6,
+    "name": "BARBECUE CHICKEN",
+    "price": 200,
+    "Category": "Non-Veg",
+    "base": "Regular Base",
+    "type": "No Cheese"
+  },
+  {
+    "id": 7,
+    "name": "BARBECUE CHICKEN",
+    "price": 300,
+    "Category": "Non-Veg",
+    "base": "Flat Bread",
+    "type": "Cheese topping"
+  },
+  {
+    "id": 8,
+    "name": "BARBECUE CHICKEN",
+    "price": 500,
+    "Category": "Non-Veg",
+    "base": "Multigrain",
+    "type": "Cheese burst"
+  },
+  {
+    "id": 9,
+    "name": "Margherita",
+    "price": 400,
+    "Category": "Veg",
+    "base": "Flat Bread",
+    "type": "No Cheese"
+  },
+  {
+    "id": 10,
+    "name": "Margherita",
+    "price": 300,
+    "Category": "Veg",
+    "base": "Thin Crust",
+    "type": "Cheese burst"
+  },
+  {
+    "id": 11,
+    "name": "BARBECUE CHICKEN",
+    "price": 200,
+    "Category": "Non-Veg",
+    "base": "Regular Base",
+    "type": "Cheese topping"
+  }
+]

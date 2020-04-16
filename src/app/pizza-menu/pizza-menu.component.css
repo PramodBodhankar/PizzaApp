@@ -1,0 +1,91 @@
+.pizza-menu-wrapper
+{
+    height: calc(100% - 42px);
+    margin-top: 16px !important;
+}
+.filter-container
+{
+    border: 1px solid;
+    border-radius: 8px;
+}
+.toggel-btn-container
+{
+    display: flex;
+    display: flex;
+    margin-top: 16px;
+    border: 1px solid;
+}
+.toggel-btn
+{
+    text-align: center;
+    cursor: pointer;
+}
+.toggel-btn:first-child{
+    border-right: 1px solid;
+}
+.filter-row
+{
+    margin-bottom: 16px;
+}
+.toggel-btn.active {
+    background: purple;
+    color: white;
+}
+:host ::ng-deep .mat-select-trigger{
+    border: 2px solid #6666;
+    padding: 8px;
+}
+:host ::ng-deep .mat-select-placeholder{
+        color: black !important;
+}
+.pizza-list{
+    justify-content: space-evenly;
+}
+.pizza-info-row
+{
+    border-bottom: 1px solid;
+    padding: 8px 0px;
+}
+.pizza-name
+{
+    font-size: 18px;
+    font-weight: 600;
+}
+.price-dtails-row
+{
+    justify-content: space-between;
+}
+.img-responsive
+{
+    max-width: 100%;
+}
+.loader-layer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+.loading-text
+{
+    color: white;
+    font-size: 30px;
+}
+.min-max-marker-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+}
+.list-container
+{
+    overflow: auto;
+}
+
