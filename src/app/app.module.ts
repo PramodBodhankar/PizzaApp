@@ -2,27 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PizzaMenuComponent } from './pizza-menu/pizza-menu.component';
-import { AppHeaderComponent } from './app-header/app-header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routing.moduel';
+import { TaskComponent } from './pages/task/task.component';
+import { StorageService } from './storage.service';
+import { TaskCardComponent } from './pages/task/task-cards/task-card.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSelectModule } from '@angular/material/select';
-import { PizzaServiceService } from './pizz-service.service';
-import { HttpClientModule }    from '@angular/common/http';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PizzaMenuComponent,
-    AppHeaderComponent
+    TaskComponent,
+    TaskCardComponent
   ],
   imports: [
     BrowserModule,
-    NoopAnimationsModule,
-    MatSliderModule,
-    MatSelectModule,
-    HttpClientModule
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule,
+    AppRoutingModule,
+    NoopAnimationsModule
   ],
-  providers: [PizzaServiceService],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

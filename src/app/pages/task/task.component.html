@@ -1,0 +1,91 @@
+<div *ngIf="taskData" class="task-page-container">
+    <div class="row m-0 page-header p-3">
+        <div class="col-md-12 p-0">
+            <h3>Sales Activity <b>({{taskData.taskCount}})</b></h3>
+        </div>
+
+        <div class="cards-container m-2 col-md-12 p-0 d-flex">
+            <div *ngFor="let cardData of taskData.orderCategories;let i=index" class="col-md-3" [class.pl-0]="i==0">
+                <div class="card p-3 shadow border-0">
+                    <div class="align-items-center card-title d-flex justify-content-between">
+                        <div class="card-status d-flex">
+                            <span class="material-icons icon-image-preview mr-1">check_circle</span>
+                            <span class="">{{cardData.title}}</span>
+                        </div>
+
+                        <span class="card-status-count">{{cardData.count}}</span>
+                    </div>
+                    <div class="card-data">
+                        <span>{{cardData.increase}} from this {{cardData.lastUpdatedOn}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body p-3">
+        <div class="task-cards row m-0">
+            <div class="col-md-6 mt-3">
+                <app-task-card [cardTitle]="'Task'">
+                    <div *ngFor="let taskstatus of taskData.taskDetails" class="acccordion-container mb-2">
+                        <div class="accordion-btn-container p-3"
+                            (click)="taskstatus.isCollapsed = !taskstatus.isCollapsed">
+                            <div class="accorion-title d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="acoordion-task-status mr-1">{{taskstatus.type}}</span>
+                                    <span class="acoordion-task-count">({{taskstatus.count}})</span>
+                                </div>
+                                <span
+                                    class="material-icons icon-image-preview">{{taskstatus.isCollapsed ? 'arrow_drop_down' : 'arrow_drop_up'}}</span>
+                            </div>
+                        </div>
+                        <div class="accordion-body border" [class.show-body]="!taskstatus.isCollapsed">
+                            {{taskstatus.Description}}
+                        </div>
+                    </div>
+
+                </app-task-card>
+            </div>
+            <div class="col-md-6 mt-3">
+                <app-task-card [cardTitle]="'Top Selling Variants'" class="h-100">
+                    <div class="selling-variants d-flex flex-wrap">
+                        <div *ngFor="let variants of taskData.sellingVariants"
+                            class="col-md-6 p-0 variant-details mt-3">
+                            <div class="variant-title"><span>{{variants.variantName}}</span></div>
+                            <div class="subvariant-title-wrapper"><span
+                                    class="subvariant-title mr-2">{{variants.SubVariant}}</span><span
+                                    class="subvariant-count">{{variants.count}}</span></div>
+                        </div>
+                    </div>
+                </app-task-card>
+            </div>
+            <div class="col-md-6 mt-3">
+                <app-task-card [cardTitle]="'Products'">
+                    <div class="carousel h-100">
+                        <mdb-carousel [isControls]="true" [interval]="'0'" class="carousel-multi-item multi-animation h-100"
+                            [type]="'carousel-multi-item'" [animation]="'slide'">
+                            <mdb-carousel-item *ngFor="let item of taskData.products; let i = index">
+                                <div class="row m-0 w-100">
+                                    <div class="col-md-3" *ngFor="let card of item; let cardIndex = index">
+                                        <div class="align-items-center justify-content-center border d-flex flex-column position-relative product-wrapper py-2 h-100">
+                                            <img [src]="'../../../assets/'+card.image">
+                                            <div class="prodcut-name position-absolute">{{card.name}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+                    </div>
+                </app-task-card>
+            </div>
+            <div class="col-md-6 mt-3">
+                <app-task-card [cardTitle]="'Stock Details'">
+                    <div class="graph">
+                        <div id="chartcontainer"></div>
+                    </div>
+                </app-task-card>
+            </div>
+        </div>
+
+    </div>
+</div>

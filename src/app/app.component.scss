@@ -1,0 +1,60 @@
+.app-container{
+    height: 100vh;
+    
+    .navigation-menu
+    {
+        background: rgb(96,125,139);
+    }
+    .app-header{
+        background: rgb(0,150,136);
+        color: white;
+    }
+    .profile-icon img{
+        height: 30px;
+        border: 2px solid;
+        border-radius: 50%;
+    }
+    .bell-icon, .profile-icon{
+        cursor: pointer;
+    }
+    .notification-count{
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+        top: -7px;
+        left: 12px;
+    }
+    .navigation-link
+    {
+        color: white;
+        border-bottom: 2px solid #949494;
+        cursor: pointer;
+    }
+
+}
+
+.m-0
+{
+    margin: 0px !important;
+}
+.p-0
+{
+    margin: 0px !important;
+}
+.h-100
+{
+    height: 100% !important;
+}
+.w-100
+{
+    width: 100% !important;
+}
+.black_border
+{
+    border: 1px solid;
+}
+.d-flex
+{
+    display: flex;
+}

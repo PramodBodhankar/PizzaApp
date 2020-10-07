@@ -1,0 +1,95 @@
+:host
+{
+    .task-page-container
+    {
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 62px);
+    }
+    .page-body
+    {
+        flex: 1 1 0;
+        overflow: auto;
+    }
+    .page-header
+    {
+        background: rgb(249,249,249)
+    }
+    .card-status
+    {
+        color: #607d8b;
+        font-weight: 500;
+    }
+    .card-data
+    {
+        color:  #607d8b;
+    }
+    .card-status-count
+    {
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .accordion-btn-container
+    {
+        background: #e0e0e0;
+        cursor: pointer;
+        .acoordion-task-status
+        {
+            color: orange;
+            font-size: 18px;
+        }
+        .acoordion-task-count
+        {
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .accordion-body
+    {
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        &.show-body
+        {
+            max-height: 200px;
+        }
+    }
+    .variant-title
+    {
+        font-size: 18px;
+    }
+    .subvariant-title-wrapper
+    {
+        font-size: 22px;
+        .subvariant-title
+        {
+            font-weight: 400;
+        }
+        .subvariant-count{
+            font-weight: 500;
+            color: rgb(69,182,230);
+        }
+    }
+    .prodcut-name
+    {
+        bottom: 0px;
+        color: white;
+        width: 100%;
+        background: linear-gradient(transparent, black);
+        text-align: center;
+    }
+}
+::ng-deep{
+    .carousel-indicators {
+        margin-bottom: 0px;
+        li {
+          background-color: red !important;
+        }
+    }
+    mdb-carousel .carousel-multi-item
+    {
+        display: flex;
+        align-items: center;
+    }
+}
